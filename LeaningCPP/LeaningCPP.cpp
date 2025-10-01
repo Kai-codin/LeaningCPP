@@ -2,11 +2,57 @@
 //
 
 #include <iostream>
+#include <string>
+using namespace std;
+
+// Defualt Vars
+string Name = "Kai";
+string courseName = "Game Dev";
+string studentID = "B014852p";
+
+// Returns Course Info
+int courseInfo()
+{
+	std::cout << "Name: " + Name + "\nCourse: " + courseName + "\nStudentID: " + studentID + "\n";
+	return 0;
+}
+
+// Returns Triangle
+int drawTriangle()
+{
+	std::cout << "\n*\n";
+	std::cout << "**\n";
+	std::cout << "* *\n";
+	std::cout << "****\n";
+	return 0;
+}
+
+// Returns Boat
+int drawBoat()
+{
+	std::cout << "\n    *\n";
+	std::cout << "    **\n";
+	std::cout << "    * *\n";
+	std::cout << "    ****\n";
+	std::cout << "     |\n";
+	std::cout << "************\n";
+	std::cout << " *        *\n";
+	std::cout << "  ********\n";
+	return 0;
+}
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    std::cout << "Goodbye World!\n";
+    std::cout << "Welcome to Challenges\n\n";
+
+	std::cout << "2 + 2" << " = " << "4\n\n";
+
+	courseInfo();
+
+	drawTriangle();
+
+	drawBoat();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
