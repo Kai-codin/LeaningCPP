@@ -45,11 +45,11 @@ int drawMenu()
 {
     string functions[3] = {"drawBoat", "drawTriangle", "courseInfo"};
     
-    std::cout << "_________________________\n";
+    std::cout << " ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱\n";
     std::cout << "| 1        Boat         |\n";
     std::cout << "| 2      Triangle       |\n";
     std::cout << "| 3     Course Info     |\n";
-    std::cout << "_________________________\n";
+    std::cout << "¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n";
     
     string option;
     cout << "\nSelect an option: ";
@@ -60,7 +60,10 @@ int drawMenu()
     
     string functionToRun = functions[optionInt];
     
-    functionToRun();
+    std::cout << functionToRun << "\n";
+    
+    
+
     
     return 0;
 }
