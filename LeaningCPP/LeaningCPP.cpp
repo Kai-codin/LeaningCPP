@@ -41,14 +41,64 @@ int drawBoat()
 	return 0;
 }
 
+int gradeCalculator()
+{
+    string grade;
+    cout << "\nStudents grade: ";
+    
+    getline(cin, grade);
+    
+    int intGrade = stoi(grade);
+    
+    if (intGrade > 99) {
+        std::cout << "Hello Harvard";
+    }
+    else if (intGrade > 80) {
+        std::cout << "Merit";
+    }
+    else if (intGrade > 40)
+    {
+        std::cout << "Pass";
+    }
+    else if (intGrade > 20)
+    {
+        std::cout << "Fail";
+    } else
+    {
+        std::cout << "Why are you even here";
+    }
+    
+    gradeCalculator();
+    return 0;
+}
+
+int isBob()
+{
+    string name;
+    cout << "\nYour name: ";
+    
+    getline(cin, name);
+    
+    if (name == "Bob")
+    {
+        std::cout << "Hello Bob\n";
+    }
+    else
+    {
+        std::cout << "Your not bob\n";
+    }
+    
+    return 0;
+}
+
 int drawMenu()
 {
-    string functions[3] = {"drawBoat", "drawTriangle", "courseInfo"};
-    
     std::cout << " ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱\n";
     std::cout << "| 1        Boat         |\n";
     std::cout << "| 2      Triangle       |\n";
     std::cout << "| 3     Course Info     |\n";
+    std::cout << "| 4       Grade         |\n";
+    std::cout << "| 5        Bob?         |\n";
     std::cout << "¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n";
     
     string option;
@@ -57,13 +107,21 @@ int drawMenu()
     getline(cin, option);
 
     int optionInt = stoi(option);
-    
-    string functionToRun = functions[optionInt];
-    
-    std::cout << functionToRun << "\n";
-    
-    
 
+    if (optionInt == 1) {
+        drawBoat();
+    } else if (optionInt == 2) {
+        drawTriangle();
+    } else if (optionInt == 3) {
+        courseInfo();
+    } else if (optionInt == 4) {
+        gradeCalculator();
+    } else if (optionInt == 5) {
+        isBob();
+    } else {
+        std::cout << "Invalid Option\n";
+        drawMenu();
+    }
     
     return 0;
 }
