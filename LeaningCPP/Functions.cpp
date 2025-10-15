@@ -7,7 +7,7 @@
 #include <iostream>
 
 
-//int Sqare(int number);
+int Sqare(int number);
 
 int Sqare(int number)
 {
