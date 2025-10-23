@@ -17,10 +17,3 @@ int Sqare(int number)
     
     return sqareNumber;
 }
-
-int main()
-{
-    Sqare(4);
-}
-
-

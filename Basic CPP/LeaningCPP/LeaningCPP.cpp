@@ -159,6 +159,18 @@ int charactorSelector() {
     return 0;
 }
 
+int printArray()
+{
+    string numbers[3] = {"-5", "-10", "-15"};
+    
+    int n = sizeof(numbers) / sizeof(numbers[0]);
+    for (int i = 0; i < n; i++) {
+        std::cout << numbers[i] << "\n";
+    }
+        
+    return 0;
+}
+
 int drawMenu()
 {
     std::cout << " ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱ ̱\n";
@@ -169,6 +181,7 @@ int drawMenu()
     std::cout << "| 5        Bob?         |\n";
     std::cout << "| 6  Charictor Selector |\n";
     std::cout << "| 7   Dynamic Triangle  |\n";
+    std::cout << "| 8    Print numbers    |\n";
     std::cout << "| X        Exit         |\n";
     std::cout << "¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n";
     
@@ -197,6 +210,8 @@ int drawMenu()
             charactorSelector();
         } else if (optionInt == 7) {
             dynamicTriangle();
+        } else if (optionInt == 8) {
+            printArray();
         } else {
             std::cout << "Invalid Option\n";
             drawMenu();
